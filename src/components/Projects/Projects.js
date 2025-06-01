@@ -2,12 +2,16 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+
+// Replace these with your own image paths or use placeholders
+import traffic from "../../Assets/Projects/traffic.jpg";
+import face from "../../Assets/Projects/face.jpg";
+import nitconf from "../../Assets/Projects/nitconf.jpg";
+import todo from "../../Assets/Projects/todo.png";
+import spam from "../../Assets/Projects/spam.png";
+import bitcoin from "../../Assets/Projects/bitcoin.jpg";
+import ecommerce from "../../Assets/Projects/ecommerce.jpg";
+import portfolio from "../../Assets/Projects/portfolio.jpg";
 
 function Projects() {
   return (
@@ -15,76 +19,90 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Recent <strong className="purple">Projects</strong>
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={traffic}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Urban Traffic Congestion Reduction"
+              description="Real-time traffic management system prioritizing emergency vehicles. Used YOLOv8n, Faster R-CNN (ResNet/MobileNet), SUMO, and BoT-SORT with datasets modeled on Indian road conditions."
+              ghLink="https://github.com/yourusername/urban-traffic-project"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={face}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Face Recognition Attendance System"
+              description="Automated attendance tracking using CNNs, OpenCV, dlib, and face recognition library. Achieves facial recognition and feature extraction with high accuracy."
+              ghLink="https://github.com/yourusername/face-attendance"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={nitconf}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="NITCONF - Conference Management System"
+              description="Spring Boot-based system for managing paper submissions and reviews. Program Committee dashboard and integrated MySQL for paper and review management."
+              ghLink="https://github.com/Rasmiya22/SE_LAB.git"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={todo}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Todo App"
+              description="Task manager built using Django, Python, HTML, and MySQL. Includes task prioritization, editing, and deletion features with user-friendly UI."
+              ghLink="https://github.com/Rasmiya22/Todo_project.git"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={spam}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Email Spam Classifier"
+              description="Spam detection using Python and scikit-learn. Built efficient classifier through preprocessing and model training in Jupyter Notebook."
+              ghLink="https://github.com/Rasmiya22/spam_email_classifier.git"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={bitcoin}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Bitcoin Price Predictor"
+              description="Machine learning-based Bitcoin price trend prediction using regression algorithms. Analyzed historical data to forecast price movements."
+              ghLink="https://github.com/Rasmiya22/Bitcoin_Prediction.git"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ecommerce}
+              isBlog={false}
+              title="E-commerce Website"
+              description="Full-fledged e-commerce website using Django with product catalog, search and filter capabilities. Focused on user-friendly design and backend management."
+              ghLink="https://github.com/Rasmiya22/Ecommerce_project.git"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={portfolio}
+              isBlog={false}
+              title="Portfolio Website"
+              description="Interactive personal portfolio website built with Django and custom HTML/CSS templates. Showcases projects, achievements, and skills with navigation animations."
+              ghLink="https://github.com/Rasmiya22/portfolio_rasmiya"
             />
           </Col>
         </Row>
